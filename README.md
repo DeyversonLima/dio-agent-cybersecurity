@@ -1,3 +1,35 @@
+# DIO Agent · Mentor de cibersegurança
+
+Projeto final do bootcamp **Santander - Cibersegurança do Zero a prática**, baseado no [DIO Agent](https://github.com/digitalinnovationone/dio-agent) (revisão `5f5e11d`).
+
+A especialização ajuda o estudante a investigar uma falha, avaliar o risco no cenário apresentado e testar a correção. O comportamento é definido em Markdown e carregado pelo agente durante a conversa.
+
+## Rode no Hermes
+
+1. Instale o Hermes pelo [guia oficial](https://hermes-agent.nousresearch.com/docs/getting-started/installation) e configure seu provedor de modelo com `hermes setup`.
+2. Abra no VS Code a pasta que contém `AGENTS.md`. No terminal integrado dessa pasta, execute `hermes`.
+3. Siga os prompts do [laboratório local](lab/README.md). Use Python 3 para executar `python -m unittest discover -s lab -v` na raiz.
+
+## Arquivos da especialização
+
+| Arquivo | Papel |
+|---|---|
+| [Roteiro da skill](skills/vulnerability-analysis/SKILL.md) | Coleta contexto, avalia o risco e orienta a correção e a revalidação. |
+| [Guia da skill](skills/vulnerability-analysis/README.md) | Explica como iniciar uma análise e o que esperar. |
+| [Fundamentos de segurança](agent/knowledge/security-basics.md) | Define ameaça, vulnerabilidade e risco, explica a tríade de segurança e reúne práticas defensivas. |
+| [Persona](agent/persona.md) | Acrescenta a postura de mentor de segurança. |
+| [AGENTS.md](AGENTS.md) | Registra a skill e a referência de conhecimento. |
+| [Laboratório](lab/README.md) | Reproduz a SQL Injection com dados fictícios e verifica a consulta parametrizada. |
+
+## Melhoria escolhida
+
+O agente usa um formato fixo de análise com escopo, achado e evidência, impacto, probabilidade, severidade, correção e revalidação. A matriz qualitativa permite justificar a prioridade em situações diferentes. Quando faltam dados para classificar o risco, a análise registra a lacuna.
+
+Os roteiros de demonstração incluem a revisão do login vulnerável, a revisão após a parametrização e uma conversa sobre um Ubuntu hipotético exposto à internet. A validação automatizada local passou nos três casos: credenciais válidas, senha incorreta e a mesma tentativa de injeção antes e depois da correção. As evidências de conversa dependem de uma sessão real do Hermes.
+
+---
+
+
 # 🤖 DIO Agent
 
 > Seu mentor com Inteligência Artificial para aprender mais e melhor na [DIO](https://dio.me).
