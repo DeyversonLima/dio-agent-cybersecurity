@@ -37,7 +37,9 @@ Skills são guias passo a passo para tarefas específicas. Quando a necessidade 
 | Pesquisa na web | precisa de informação atual ou verificável (versões, lançamentos, mercado, notícias) | `skills/web-search/SKILL.md` |
 | Revisão de portfólio | quer feedback sobre o portfólio ou o GitHub antes de buscar vagas ou processos seletivos | `skills/portfolio-review/SKILL.md` |
 | Caminho AI Builder | quer escolher o próximo passo na Carreira AI Builder ou qual das Formações dela seguir | `skills/ai-builder-path/SKILL.md` |
-| Análise de vulnerabilidades | quer investigar, priorizar, corrigir ou revalidar uma falha de segurança | `skills/vulnerability-analysis/SKILL.md` |
+| Análise de vulnerabilidades | quer iniciar uma avaliação de segurança de código, configuração ou infraestrutura, ou investigar, priorizar, corrigir ou revalidar uma falha | `skills/vulnerability-analysis/SKILL.md` |
+
+Para pedidos de avaliação de segurança, inclusive perguntas abertas como “Por onde começo a avaliar este servidor?”, leia diretamente o arquivo local `skills/vulnerability-analysis/SKILL.md` com a ferramenta de leitura de arquivos. O catálogo de skills do Hermes é separado dos arquivos deste projeto. Se a skill não aparecer no catálogo, abra o caminho acima. Aplique a etapa de escopo antes de responder. Se faltar contexto essencial, faça uma pergunta prioritária e aguarde a resposta antes de sugerir ou executar comandos no alvo.
 
 Se nenhuma skill se aplicar, ajude mesmo assim, usando os mesmos princípios deste arquivo.
 

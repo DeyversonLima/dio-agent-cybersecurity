@@ -25,7 +25,17 @@ A especialização ajuda o estudante a investigar uma falha, avaliar o risco no 
 
 O agente usa um formato fixo de análise com escopo, achado e evidência, impacto, probabilidade, severidade, correção e revalidação. A matriz qualitativa permite justificar a prioridade em situações diferentes. Quando faltam dados para classificar o risco, a análise registra a lacuna.
 
-Os roteiros de demonstração incluem a revisão do login vulnerável, a revisão após a parametrização e uma conversa sobre um Ubuntu hipotético exposto à internet. A validação automatizada local passou nos três casos: credenciais válidas, senha incorreta e a mesma tentativa de injeção antes e depois da correção. As evidências de conversa dependem de uma sessão real do Hermes.
+## Evidências no Hermes
+
+As três sessões foram realizadas com Hermes Agent v0.23.0 e o modelo `upstage/solar-mini4:free`. Os PDFs são exportações das conversas e incluem as respostas intermediárias.
+
+| Sessão | O que demonstra |
+|---|---|
+| [Análise do login vulnerável](images/images%20PDF/Review%20vulnerable%20login%20logic%20in%20lab_app%20py.pdf) | A revisão do `app.py` vulnerável em uma cópia local identifica a concatenação, explica o desvio de autenticação e propõe parâmetros. T1190 é discutido para a hipótese de aplicação exposta publicamente. |
+| [Reanálise após a correção](images/images%20PDF/Review%20lab%20app%20py%20test%20app%20py.pdf) | A consulta parametrizada mantém o login válido, rejeita a senha incorreta e bloqueia a entrada que contornava o login vulnerável. Os três testes passaram. |
+| [Avaliação do Ubuntu hipotético](images/images%20PDF/Analyze%20laboratory%20Ubuntu%20server%20security.pdf) | Um pedido espontâneo leva o Hermes a abrir a skill local e perguntar sobre autorização antes de sugerir comandos. Após revisão guiada, o agente separa tentativas da probabilidade de comprometimento e registra a severidade como indeterminada. |
+
+Na sessão do Ubuntu, a primeira resposta também perguntou pelo nível de experiência. A avaliação inicial confundiu a frequência de tentativas com a chance de comprometimento e precisou de revisão. A transcrição registra essas limitações e a correção final. Nenhum servidor real foi avaliado.
 
 ---
 
